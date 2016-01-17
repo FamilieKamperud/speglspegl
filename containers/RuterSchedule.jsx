@@ -34,20 +34,20 @@ export default class RuterSchedule extends React.Component {
   render() {
     return (
       <div>
-        <h1>Rutetider</h1>
-        <h2>Dælenenga</h2>
-        <h3>Nord</h3>
+        <h2>Rutetider</h2>
+        <h3>Dælenenga</h3>
+        <h4>Nord</h4>
         <ol>
           <li>nå - 28 - Fornebu</li>
           <li>2 min - 20 - Skøyen</li>
         </ol>
-        <h3>Sør</h3>
+        <h4>Sør</h4>
         <ol>
           <li>1 min - 28 - Gokk</li>
         </ol>
-        <h2>Københavngata</h2>
-        <h3>Nord</h3>
-        <h3>Sør</h3>
+        <h3>Københavngata</h3>
+        <h4>Nord</h4>
+        <h4>Sør</h4>
       </div>
     )
   }
