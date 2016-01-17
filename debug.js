@@ -1,5 +1,7 @@
 import fetch from 'isomorphic-fetch'
-window.debug = {
-  fetch
-}
+import * as ruter from './services/ruter'
 
+window.debug = {
+  fetch,
+  ruter
+}
