@@ -14,7 +14,7 @@ export default class RuterSchedule extends React.Component {
   };
 
 //  componentDidMount() {
-//    const { dispatch} = this.props
+//    const { dispatch } = this.props
 //    dispatch(fetchRuterScheduleIfNeeded())
 //  }
 
@@ -59,8 +59,7 @@ const mapStateToProps = (state) => {
     isFetching,
     lastUpdated
   } = ruterSchedulesByStop['Dælenenga'] || {
-    isFetching: true,
-    items: []
+    isFetching: true
   }
 
   return {
