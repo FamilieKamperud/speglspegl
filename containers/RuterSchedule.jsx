@@ -6,6 +6,13 @@ import { connect } from 'react-redux'
 //  invalidateRuterSchedule
 //} from '../actions'
 
+export default class RuterSchedule extends React.Component {
+  static propTypes = {
+    isFetching: PropTypes.bool.isRequired,
+    lastUpdated: PropTypes.number,
+    dispatch: PropTypes.func.isRequired
+  };
+
 //  componentDidMount() {
 //    const { dispatch} = this.props
 //    dispatch(fetchRuterScheduleIfNeeded())
@@ -24,44 +31,39 @@ import { connect } from 'react-redux'
 //    dispatch(fetchRuterScheduleIfNeeded())
 //  }
 
-const RuterSchedule = () => (
-  <div>
-    <h1>Rutetider</h1>
-    <h2>Dælenenga</h2>
-    <h3>Nord</h3>
-    <ol>
-      <li>nå - 28 - Fornebu</li>
-      <li>2 min - 20 - Skøyen</li>
-    </ol>
-    <h3>Sør</h3>
-    <ol>
-      <li>1 min - 28 - Gokk</li>
-    </ol>
-    <h2>Københavngata</h2>
-    <h3>Nord</h3>
-    <h3>Sør</h3>
-  </div>
-)
-
-RuterSchedule.propTypes = {
-  isFetching: PropTypes.bool.isRequired,
-  lastUpdated: PropTypes.number,
-  dispatch: PropTypes.func.isRequired
+  render() {
+    return (
+      <div>
+        <h1>Rutetider</h1>
+        <h2>Dælenenga</h2>
+        <h3>Nord</h3>
+        <ol>
+          <li>nå - 28 - Fornebu</li>
+          <li>2 min - 20 - Skøyen</li>
+        </ol>
+        <h3>Sør</h3>
+        <ol>
+          <li>1 min - 28 - Gokk</li>
+        </ol>
+        <h2>Københavngata</h2>
+        <h3>Nord</h3>
+        <h3>Sør</h3>
+      </div>
+    )
+  }
 }
 
 const mapStateToProps = (state) => {
   const { ruterSchedulesByStop } = state
   const {
     isFetching,
-    lastUpdated,
-    items: posts
+    lastUpdated
   } = ruterSchedulesByStop['Dælenenga'] || {
     isFetching: true,
     items: []
   }
 
   return {
-    posts,
     isFetching,
     lastUpdated
   }
