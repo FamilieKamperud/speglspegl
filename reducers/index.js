@@ -33,7 +33,7 @@ function stops(state = {
   }
 }
 
-function ruterScheduleByStop(state = { }, action) {
+function ruterSchedulesByStop(state = { }, action) {
   switch (action.type) {
     case INVALIDATE_RUTER_SCHEDULE:
     case RECEIVE_RUTER_SCHEDULE:
@@ -48,7 +48,7 @@ function ruterScheduleByStop(state = { }, action) {
 }
 
 const rootReducer = combineReducers({
-  ruterScheduleByStop
+  ruterSchedulesByStop
 })
 
 export default rootReducer

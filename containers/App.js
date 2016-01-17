@@ -1,19 +1,19 @@
 import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
 import {
-  fetchRuterScheduleIfNeeded,
+//  fetchRuterScheduleIfNeeded,
   invalidateRuterSchedule
 } from '../actions'
 
 class App extends Component {
   componentDidMount() {
     const { dispatch} = this.props
-    dispatch(fetchRuterScheduleIfNeeded())
+ //   dispatch(fetchRuterScheduleIfNeeded())
   }
 
   componentWillReceiveProps(nextProps) {
     const { dispatch } = nextProps
-    dispatch(fetchRuterScheduleIfNeeded())
+//    dispatch(fetchRuterScheduleIfNeeded())
   }
 
   handleRefreshClick(e) {
@@ -21,7 +21,7 @@ class App extends Component {
 
     const { dispatch } = this.props
     dispatch(invalidateRuterSchedule())
-    dispatch(fetchRuterScheduleIfNeeded())
+//    dispatch(fetchRuterScheduleIfNeeded())
   }
 
   render() {
