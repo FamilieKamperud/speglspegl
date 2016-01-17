@@ -1,34 +1,27 @@
 import { combineReducers } from 'redux'
 import {
-  SELECT_REDDIT, INVALIDATE_REDDIT,
-  REQUEST_POSTS, RECEIVE_POSTS
+  INVALIDATE_RUTER_SCHEDULE,
+  REQUEST_RUTER_SCHEDULE,
+  RECEIVE_RUTER_SCHEDULE
 } from '../actions'
 
-function selectedReddit(state = 'reactjs', action) {
-  switch (action.type) {
-    case SELECT_REDDIT:
-      return action.reddit
-    default:
-      return state
-  }
-}
-
-function posts(state = {
+function stops(state = {
   isFetching: false,
   didInvalidate: false,
   items: []
 }, action) {
   switch (action.type) {
-    case INVALIDATE_REDDIT:
+    case INVALIDATE_RUTER_SCHEDULE:
       return Object.assign({}, state, {
         didInvalidate: true
       })
-    case REQUEST_POSTS:
+    case REQUEST_RUTER_SCHEDULE:
       return Object.assign({}, state, {
         isFetching: true,
         didInvalidate: false
       })
-    case RECEIVE_POSTS:
+    case RECEIVE_RUTER_SCHEDULE:
+      debugger;
       return Object.assign({}, state, {
         isFetching: false,
         didInvalidate: false,
@@ -40,13 +33,14 @@ function posts(state = {
   }
 }
 
-function postsByReddit(state = { }, action) {
+function ruterScheduleByStop(state = { }, action) {
   switch (action.type) {
-    case INVALIDATE_REDDIT:
-    case RECEIVE_POSTS:
-    case REQUEST_POSTS:
+    case INVALIDATE_RUTER_SCHEDULE:
+    case RECEIVE_RUTER_SCHEDULE:
+    case REQUEST_RUTER_SCHEDULE:
+      //replace with es* stuff
       return Object.assign({}, state, {
-        [action.reddit]: posts(state[action.reddit], action)
+        [action.stop]: stops(state[action.stop], action)
       })
     default:
       return state
@@ -54,8 +48,7 @@ function postsByReddit(state = { }, action) {
 }
 
 const rootReducer = combineReducers({
-  postsByReddit,
-  selectedReddit
+  ruterScheduleByStop
 })
 
 export default rootReducer

@@ -18,12 +18,18 @@ module.exports = {
     new webpack.NoErrorsPlugin()
   ],
   module: {
-    loaders: [{
-      test: /\.js$/,
-      loaders: ['babel'],
-      exclude: /node_modules/,
-      include: __dirname
-    }]
+    loaders: [
+      {
+        test: /\.js$/,
+        loaders: ['babel'],
+        exclude: /node_modules/
+      },
+      {
+        test: /\.styl/,
+        loader: 'style-loader!css-loader!stylus-loader',
+        exclude: /node_modules/
+      }
+    ]
   }
 }
 
