@@ -1,10 +1,11 @@
-import fetch from 'isomorphic-fetch'
+//import fetch from 'isomorphic-fetch'
 
-export const REQUEST_POSTS = 'REQUEST_POSTS'
-export const RECEIVE_POSTS = 'RECEIVE_POSTS'
-export const SELECT_REDDIT = 'SELECT_REDDIT'
-export const INVALIDATE_REDDIT = 'INVALIDATE_REDDIT'
+export const RECEIVE_RUTER_SCHEDULE = 'RECEIVE_RUTER_SCHEDULE'
 
+//export const REQUEST_POSTS = 'REQUEST_POSTS'
+//export const SELECT_REDDIT = 'SELECT_REDDIT'
+//export const INVALIDATE_REDDIT = 'INVALIDATE_REDDIT'
+//
 //export function selectReddit(reddit) {
 //  return {
 //    type: SELECT_REDDIT,
