@@ -1,10 +1,12 @@
 import { RECEIVE_RUTER_SCHEDULE } from '../actions'
 
-export default (initialState = {}, action) => {
+const initialState = {}
+
+export default (state = initialState, action) => {
   switch(action.type) {
     case RECEIVE_RUTER_SCHEDULE:
-      break
+      return state
     default:
-      return initialState
+      return state
   }
 }
