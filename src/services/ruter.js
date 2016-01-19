@@ -1,6 +1,6 @@
 import JSONP from 'browser-jsonp'
 
-const stops = {
+export const stops = {
   dalenenga: 3010524,
   birkelunden: 6644612,
   kobenhavngata: 6644844,
@@ -22,8 +22,12 @@ export function getDepartures(stopId){
     JSONP({
       url: `http://reisapi.ruter.no/StopVisit/GetDepartures/${stopId}`,
       data: {},
-      success: resolve,
+      success: data => resolve(parseDestinationInfo(data)),
       error: reject
     })
   })
+}
+
+function parseDestinationInfo(data){
+  return data
 }
