@@ -2,67 +2,29 @@ import React, { PropTypes } from 'react'
 import { connect } from 'react-redux'
 import map from 'lodash/collection/map'
 
-//import {
-//  fetchRuterScheduleIfNeeded,
-//  invalidateRuterSchedule
-//} from '../actions'
-
 export default class RuterSchedule extends React.Component {
   static propTypes = {
-    isFetching: PropTypes.bool.isRequired,
-    lastUpdated: PropTypes.number,
-    dispatch: PropTypes.func.isRequired
+    ruterSchedule: PropTypes.object.isRequired
   };
 
-//  componentDidMount() {
-//    const { dispatch } = this.props
-//    dispatch(fetchRuterScheduleIfNeeded())
-//  }
-
-//  componentWillReceiveProps(nextProps) {
-//    const { dispatch } = nextProps
-//    dispatch(fetchRuterScheduleIfNeeded())
-//  }
-
-//  handleRefreshClick(e) {
-//    e.preventDefault()
-//
-//    const { dispatch } = this.props
-//    dispatch(invalidateRuterSchedule())
-//    dispatch(fetchRuterScheduleIfNeeded())
-//  }
-
   render() {
+    const { ruterSchedule } = this.props
     return (
       <div>
         <h2>Rutetider</h2>
-        <ul>
-          <RuterStop name="Dælenenga" departures={mockDalenenga} />
-        </ul>
-        <ul>
-          <RuterStop name="Københavngata" departures={mockDalenenga} />
-        </ul>
-        <ul>
-          <RuterStop name="Birkelunden" departures={mockDalenenga} />
-        </ul>
+        {map(ruterSchedule, (stopSchedule, name) => (
+          <RuterStop name={name} key={name} departures={stopSchedule.departures} />
+        ))}
       </div>
     )
   }
 }
 
 const mapStateToProps = (state) => {
-  const { ruterSchedulesByStop } = state
-  //  const {
-  //    isFetching,
-  //    lastUpdated
-  //  } = ruterSchedulesByStop['Dælenenga'] || {
-  //    isFetching: true
-  //  }
+  const { ruterSchedule } = state
 
   return {
-    ruterSchedulesByStop
-    //    isFetching,
-    //    lastUpdated
+    ruterSchedule
   }
 }
 
@@ -70,7 +32,7 @@ const RuterStop = ({name, departures}) => (
   <section>
     <h3>{name}</h3>
     <ul>
-      {map(departures, (routeDepartures, name) => <RuterRoute name={name} departures={routeDepartures} />) }
+      {map(departures, (routeDepartures, name) => <RuterRoute name={name} key={name} departures={routeDepartures} />) }
     </ul>
   </section>
 )
@@ -83,16 +45,5 @@ const RuterRoute = ({departures, name}) => (
     </ul>
   </section>
 )
-
-const mockDepartures = [
-  Date.now(),
-  Date.now(),
-  Date.now()
-]
-
-const mockDalenenga = {
-  '30 Bygdøy': mockDepartures,
-  '30 Nydalen': mockDepartures
-}
 
 export default connect(mapStateToProps)(RuterSchedule)
