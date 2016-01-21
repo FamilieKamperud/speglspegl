@@ -12,10 +12,13 @@ describe('ruterSchedule', () => {
   })
 
   it('can receive and store departure data', () => {
-    const departures = {} //TODO decide how to store departure data
-    const state = ruterSchedule(undefined, receiveRuterSchedule('dalenenga', departures))
-    expect(state.dalenenga.departures).to.equal(departures)
-    expect(state.dalenenga.receivedAt).to.equal(Date.now()) //maybe add some leeway here?
+    const departures = {
+        '30 Bygdøy': [ Date.now(), Date.now(), Date.now() ],
+        '30 Nydalen': [ Date.now(), Date.now(), Date.now() ]
+    }
+    const state = ruterSchedule(undefined, receiveRuterSchedule('Dælenenga', departures))
+    expect(state['Dælenenga'].departures).to.equal(departures)
+    expect(state['Dælenenga'].receivedAt).to.equal(Date.now()) //maybe add some leeway here?
   })
 
 })
