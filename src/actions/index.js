@@ -26,16 +26,16 @@ export const RECEIVE_RUTER_SCHEDULE = 'RECEIVE_RUTER_SCHEDULE'
 //    reddit
 //  }
 //}
-//
-//function receivePosts(reddit, json) {
-//  return {
-//    type: RECEIVE_POSTS,
-//    reddit: reddit,
-//    posts: json.data.children.map(child => child.data),
-//    receivedAt: Date.now()
-//  }
-//}
-//
+
+export function receiveRuterSchedule(stop, departures) {
+  return {
+    type: RECEIVE_RUTER_SCHEDULE,
+    stop,
+    departures,
+    receivedAt: Date.now()
+  }
+}
+
 //function fetchPosts(reddit) {
 //  return dispatch => {
 //    dispatch(requestPosts(reddit))

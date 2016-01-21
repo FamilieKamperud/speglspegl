@@ -5,7 +5,10 @@ const initialState = {}
 export default (state = initialState, action) => {
   switch(action.type) {
     case RECEIVE_RUTER_SCHEDULE:
-      return state
+      const { departures, stop, receivedAt } = action
+      return { ...state, [stop]: {
+        departures, receivedAt
+      }}
     default:
       return state
   }
