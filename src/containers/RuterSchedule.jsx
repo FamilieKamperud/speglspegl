@@ -1,5 +1,6 @@
 import React, { PropTypes } from 'react'
 import { connect } from 'react-redux'
+import map from 'lodash/collection/map'
 
 //import {
 //  fetchRuterScheduleIfNeeded,
@@ -35,19 +36,15 @@ export default class RuterSchedule extends React.Component {
     return (
       <div>
         <h2>Rutetider</h2>
-        <h3>Dælenenga</h3>
-        <h4>Nord</h4>
-        <ol>
-          <li>nå - 28 - Fornebu</li>
-          <li>2 min - 20 - Skøyen</li>
-        </ol>
-        <h4>Sør</h4>
-        <ol>
-          <li>1 min - 28 - Gokk</li>
-        </ol>
-        <h3>Københavngata</h3>
-        <h4>Nord</h4>
-        <h4>Sør</h4>
+        <ul>
+          <RuterStop name="Dælenenga" departures={mockDalenenga} />
+        </ul>
+        <ul>
+          <RuterStop name="Københavngata" departures={mockDalenenga} />
+        </ul>
+        <ul>
+          <RuterStop name="Birkelunden" departures={mockDalenenga} />
+        </ul>
       </div>
     )
   }
@@ -55,17 +52,47 @@ export default class RuterSchedule extends React.Component {
 
 const mapStateToProps = (state) => {
   const { ruterSchedulesByStop } = state
-  const {
-    isFetching,
-    lastUpdated
-  } = ruterSchedulesByStop['Dælenenga'] || {
-    isFetching: true
-  }
+  //  const {
+  //    isFetching,
+  //    lastUpdated
+  //  } = ruterSchedulesByStop['Dælenenga'] || {
+  //    isFetching: true
+  //  }
 
   return {
-    isFetching,
-    lastUpdated
+    ruterSchedulesByStop
+    //    isFetching,
+    //    lastUpdated
   }
+}
+
+const RuterStop = ({name, departures}) => (
+  <section>
+    <h3>{name}</h3>
+    <ul>
+      {map(departures, (routeDepartures, name) => <RuterRoute name={name} departures={routeDepartures} />) }
+    </ul>
+  </section>
+)
+
+const RuterRoute = ({departures, name}) => (
+  <section>
+    <h5>{name}</h5>
+    <ul>
+      {departures.map((departure, index) => <li key={index}>{departure}</li>)}
+    </ul>
+  </section>
+)
+
+const mockDepartures = [
+  Date.now(),
+  Date.now(),
+  Date.now()
+]
+
+const mockDalenenga = {
+  '30 Bygdøy': mockDepartures,
+  '30 Nydalen': mockDepartures
 }
 
 export default connect(mapStateToProps)(RuterSchedule)
