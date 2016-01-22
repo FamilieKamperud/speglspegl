@@ -31,6 +31,11 @@ module.exports = {
         test: /\.styl/,
         loader: 'style-loader!css-loader!stylus-loader',
         include: path.resolve(__dirname, 'src')
+      },
+      {
+        test: /\.json$/,
+        loader: 'json-loader',
+        include: path.resolve(__dirname, 'src')
       }
     ]
   },
