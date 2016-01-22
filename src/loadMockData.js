@@ -1,7 +1,11 @@
 import { receiveRuterSchedule } from './actions'
 import moment from 'moment'
 
-const mockDepartures = [ moment(), moment(), moment() ]
+const mockDepartures = [
+  moment().add(1, 'minutes'),
+  moment().add(11, 'minutes'),
+  moment().add(21, 'minutes')
+]
 
 const mockDalenenga = {
   '30 Bygdøy': mockDepartures,
