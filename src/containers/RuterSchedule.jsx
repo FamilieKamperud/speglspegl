@@ -1,6 +1,8 @@
 import React, { PropTypes } from 'react'
 import { connect } from 'react-redux'
 import map from 'lodash/collection/map'
+import moment from 'moment'
+moment.locale('nb')
 
 export default class RuterSchedule extends React.Component {
   static propTypes = {
