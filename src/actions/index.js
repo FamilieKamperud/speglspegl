@@ -32,7 +32,7 @@ export function receiveRuterSchedule(stop, departures) {
     type: RECEIVE_RUTER_SCHEDULE,
     stop,
     departures,
-    receivedAt: Date.now()
+    receivedAt: new Date()
   }
 }
 
