@@ -4,10 +4,15 @@ import { Provider } from 'react-redux'
 import App from './containers/App'
 import configureStore from './store/configureStore'
 import './debug'
-import loadMockData from './loadMockData'
 
 const store = configureStore()
-loadMockData(store)
+
+//load real departure data once from ruter API
+import { getDepartures, stops } from './services/ruter'
+import { receiveRuterSchedule } from './actions'
+getDepartures(stops.dalenenga).then(departures => {
+  store.dispatch(receiveRuterSchedule('Dælenenga', departures))
+})
 
 render(
   <Provider store={store}>
