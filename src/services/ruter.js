@@ -1,4 +1,9 @@
 import JSONP from 'browser-jsonp'
+import _ from 'lodash'
+import moment from 'moment'
+
+
+const DEPARTURES_CAP = 3;
 
 export const stops = {
   dalenenga: 3010524,
@@ -28,6 +33,17 @@ export function getDepartures(stopId){
   })
 }
 
-function parseDestinationInfo(data){
-  return data
+export function parseDestinationInfo(buses){
+  // create object keys
+  let parsedDepartures = _.groupBy(buses, (bus)=>{
+    let departure = bus.MonitoredVehicleJourney;
+    return departure.PublishedLineName+' '+departure.DestinationName;
+  });
+  // pick only expected arrival out of each bus departure
+  parsedDepartures = _.mapValues(parsedDepartures, departures =>
+    _.map(departures, departure =>
+      moment(departure.MonitoredVehicleJourney.MonitoredCall.ExpectedArrivalTime)
+  ));
+  // only return the (3) next departures
+  return _.mapValues(parsedDepartures, departures=> _.take(departures, DEPARTURES_CAP)); 
 }
