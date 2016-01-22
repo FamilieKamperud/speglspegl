@@ -24,17 +24,16 @@ export default class RuterSchedule extends React.Component {
 
 const mapStateToProps = (state) => {
   const { ruterSchedule } = state
-
-  return {
-    ruterSchedule
-  }
+  return { ruterSchedule }
 }
 
 const RuterStop = ({name, departures}) => (
   <section>
     <h3>{name}</h3>
     <ul>
-      {map(departures, (routeDepartures, name) => <RuterRoute name={name} key={name} departures={routeDepartures} />) }
+      {map(departures, (routeDepartures, name) => (
+        <RuterRoute name={name} key={name} departures={routeDepartures} />
+      ))}
     </ul>
   </section>
 )
@@ -43,7 +42,9 @@ const RuterRoute = ({departures, name}) => (
   <section>
     <h5>{name}</h5>
     <ul>
-      {departures.map((departure, index) => <li key={index}>{departure.fromNow()}</li>)}
+      {departures.map((departure, index) => (
+        <li key={index}>{departure.fromNow()}</li>
+      ))}
     </ul>
   </section>
 )
