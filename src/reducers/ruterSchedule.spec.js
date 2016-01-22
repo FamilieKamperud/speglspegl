@@ -13,12 +13,12 @@ describe('ruterSchedule', () => {
 
   it('can receive and store departure data', () => {
     const departures = {
-        '30 Bygdøy': [ Date.now(), Date.now(), Date.now() ],
-        '30 Nydalen': [ Date.now(), Date.now(), Date.now() ]
+      '30 Bygdøy': [ new Date(), new Date(), new Date() ],
+      '30 Nydalen': [ new Date(), new Date(), new Date() ]
     }
     const state = ruterSchedule(undefined, receiveRuterSchedule('Dælenenga', departures))
     expect(state['Dælenenga'].departures).to.equal(departures)
-    expect(state['Dælenenga'].receivedAt).to.equal(Date.now()) //maybe add some leeway here?
+    expect(state['Dælenenga'].receivedAt).to.equalDate(new Date())
   })
 
 })
