@@ -1,6 +1,7 @@
 /*eslint-env node, mocha */
 /*global expect */
 
+import moment from 'moment'
 import ruterSchedule from './ruterSchedule'
 import { receiveRuterSchedule } from '../actions'
 
@@ -13,12 +14,12 @@ describe('ruterSchedule', () => {
 
   it('can receive and store departure data', () => {
     const departures = {
-      '30 Bygdøy': [ new Date(), new Date(), new Date() ],
-      '30 Nydalen': [ new Date(), new Date(), new Date() ]
+      '30 Bygdøy': [ moment(), moment(), moment() ],
+      '30 Nydalen': [ moment(), moment(), moment() ]
     }
     const state = ruterSchedule(undefined, receiveRuterSchedule('Dælenenga', departures))
     expect(state['Dælenenga'].departures).to.equal(departures)
-    expect(state['Dælenenga'].receivedAt).to.equalDate(new Date())
+    expect(state['Dælenenga'].receivedAt.isSame(moment(), 'day')).to.be.true
   })
 
 })

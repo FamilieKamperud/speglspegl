@@ -1,10 +1,7 @@
 import { receiveRuterSchedule } from './actions'
+import moment from 'moment'
 
-const mockDepartures = [
-  Date.now(),
-  Date.now(),
-  Date.now()
-]
+const mockDepartures = [ moment(), moment(), moment() ]
 
 const mockDalenenga = {
   '30 Bygdøy': mockDepartures,

@@ -3,7 +3,7 @@ module.exports = function(config) {
 
     singleRun: true,
     browsers: ['PhantomJS'],
-    frameworks: ['phantomjs-shim', 'mocha', 'chai-datetime', 'chai'],
+    frameworks: ['phantomjs-shim', 'mocha', 'chai'],
     reporters: ['mocha'],
 
     files: [
@@ -27,8 +27,7 @@ module.exports = function(config) {
       require('karma-sourcemap-loader'),
       require('karma-mocha'),
       require('karma-mocha-reporter'),
-      require('karma-chai'),
-      require('karma-chai-datetime')
+      require('karma-chai')
     ]
   })
 }

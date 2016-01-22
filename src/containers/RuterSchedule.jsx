@@ -41,7 +41,7 @@ const RuterRoute = ({departures, name}) => (
   <section>
     <h5>{name}</h5>
     <ul>
-      {departures.map((departure, index) => <li key={index}>{departure}</li>)}
+      {departures.map((departure, index) => <li key={index}>{departure.fromNow()}</li>)}
     </ul>
   </section>
 )
