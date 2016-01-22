@@ -1,0 +1,572 @@
+[
+  {
+    "RecordedAtTime": "2016-01-21T21:45:43.31+01:00",
+    "MonitoringRef": "3010524",
+    "MonitoredVehicleJourney": {
+      "LineRef": "30",
+      "DirectionRef": "1",
+      "FramedVehicleJourneyRef": {
+        "DataFrameRef": "2016-01-21",
+        "DatedVehicleJourneyRef": "16907"
+      },
+      "PublishedLineName": "30",
+      "DirectionName": "1",
+      "OperatorRef": "Nobina",
+      "OriginName": "Huk",
+      "OriginRef": "3010151",
+      "DestinationRef": 3012135,
+      "DestinationName": "Nydalen",
+      "OriginAimedDepartureTime": "0001-01-01T00:00:00",
+      "DestinationAimedArrivalTime": "0001-01-01T00:00:00",
+      "Monitored": true,
+      "InCongestion": false,
+      "Delay": "PT74S",
+      "TrainBlockPart": null,
+      "BlockRef": "3005",
+      "VehicleRef": "741268",
+      "VehicleMode": 0,
+      "VehicleJourneyName": "200300169",
+      "MonitoredCall": {
+        "VisitNumber": 22,
+        "VehicleAtStop": false,
+        "DestinationDisplay": "Nydalen",
+        "AimedArrivalTime": "2016-01-21T21:47:00+01:00",
+        "ExpectedArrivalTime": "2016-01-21T21:48:14+01:00",
+        "AimedDepartureTime": "2016-01-21T21:47:00+01:00",
+        "ExpectedDepartureTime": "2016-01-21T21:48:14+01:00",
+        "DeparturePlatformName": "1"
+      },
+      "VehicleFeatureRef": null
+    },
+    "Extensions": {
+      "IsHub": false,
+      "OccupancyData": {
+        "OccupancyAvailable": false,
+        "OccupancyPercentage": 0
+      },
+      "Deviations": [],
+      "LineColour": "E60000"
+    }
+  },
+  {
+    "RecordedAtTime": "2016-01-21T21:45:43.31+01:00",
+    "MonitoringRef": "3010524",
+    "MonitoredVehicleJourney": {
+      "LineRef": "30",
+      "DirectionRef": "2",
+      "FramedVehicleJourneyRef": {
+        "DataFrameRef": "2016-01-21",
+        "DatedVehicleJourneyRef": "17207"
+      },
+      "PublishedLineName": "30",
+      "DirectionName": "2",
+      "OperatorRef": "Nobina",
+      "OriginName": "Tamburveien",
+      "OriginRef": "3012135",
+      "DestinationRef": 3010151,
+      "DestinationName": "Bygdøy",
+      "OriginAimedDepartureTime": "0001-01-01T00:00:00",
+      "DestinationAimedArrivalTime": "0001-01-01T00:00:00",
+      "Monitored": true,
+      "InCongestion": false,
+      "Delay": "PT0S",
+      "TrainBlockPart": null,
+      "BlockRef": "3012",
+      "VehicleRef": "741311",
+      "VehicleMode": 0,
+      "VehicleJourneyName": "200300172",
+      "MonitoredCall": {
+        "VisitNumber": 10,
+        "VehicleAtStop": false,
+        "DestinationDisplay": "Bygdøy",
+        "AimedArrivalTime": "2016-01-21T21:55:00+01:00",
+        "ExpectedArrivalTime": "2016-01-21T21:55:00+01:00",
+        "AimedDepartureTime": "2016-01-21T21:55:00+01:00",
+        "ExpectedDepartureTime": "2016-01-21T21:55:00+01:00",
+        "DeparturePlatformName": "2"
+      },
+      "VehicleFeatureRef": null
+    },
+    "Extensions": {
+      "IsHub": false,
+      "OccupancyData": {
+        "OccupancyAvailable": true,
+        "OccupancyPercentage": 0
+      },
+      "Deviations": [],
+      "LineColour": "E60000"
+    }
+  },
+  {
+    "RecordedAtTime": "2016-01-21T21:45:43.31+01:00",
+    "MonitoringRef": "3010524",
+    "MonitoredVehicleJourney": {
+      "LineRef": "30",
+      "DirectionRef": "1",
+      "FramedVehicleJourneyRef": {
+        "DataFrameRef": "2016-01-21",
+        "DatedVehicleJourneyRef": "17107"
+      },
+      "PublishedLineName": "30",
+      "DirectionName": "1",
+      "OperatorRef": "Nobina",
+      "OriginName": "Huk",
+      "OriginRef": "3010151",
+      "DestinationRef": 3012135,
+      "DestinationName": "Nydalen",
+      "OriginAimedDepartureTime": "0001-01-01T00:00:00",
+      "DestinationAimedArrivalTime": "0001-01-01T00:00:00",
+      "Monitored": true,
+      "InCongestion": false,
+      "Delay": "PT147S",
+      "TrainBlockPart": null,
+      "BlockRef": "3003",
+      "VehicleRef": "741293",
+      "VehicleMode": 0,
+      "VehicleJourneyName": "200300171",
+      "MonitoredCall": {
+        "VisitNumber": 22,
+        "VehicleAtStop": false,
+        "DestinationDisplay": "Nydalen",
+        "AimedArrivalTime": "2016-01-21T22:07:00+01:00",
+        "ExpectedArrivalTime": "2016-01-21T22:09:27+01:00",
+        "AimedDepartureTime": "2016-01-21T22:07:00+01:00",
+        "ExpectedDepartureTime": "2016-01-21T22:09:27+01:00",
+        "DeparturePlatformName": "1"
+      },
+      "VehicleFeatureRef": null
+    },
+    "Extensions": {
+      "IsHub": false,
+      "OccupancyData": {
+        "OccupancyAvailable": true,
+        "OccupancyPercentage": 0
+      },
+      "Deviations": [],
+      "LineColour": "E60000"
+    }
+  },
+  {
+    "RecordedAtTime": "2016-01-21T21:45:43.31+01:00",
+    "MonitoringRef": "3010524",
+    "MonitoredVehicleJourney": {
+      "LineRef": "30",
+      "DirectionRef": "2",
+      "FramedVehicleJourneyRef": {
+        "DataFrameRef": "2016-01-21",
+        "DatedVehicleJourneyRef": "17407"
+      },
+      "PublishedLineName": "30",
+      "DirectionName": "2",
+      "OperatorRef": "Nobina",
+      "OriginName": "Tamburveien",
+      "OriginRef": "3012135",
+      "DestinationRef": 3010151,
+      "DestinationName": "Bygdøy",
+      "OriginAimedDepartureTime": "0001-01-01T00:00:00",
+      "DestinationAimedArrivalTime": "0001-01-01T00:00:00",
+      "Monitored": true,
+      "InCongestion": false,
+      "Delay": "PT0S",
+      "TrainBlockPart": null,
+      "BlockRef": "3005",
+      "VehicleRef": "741268",
+      "VehicleMode": 0,
+      "VehicleJourneyName": "200300174",
+      "MonitoredCall": {
+        "VisitNumber": 10,
+        "VehicleAtStop": false,
+        "DestinationDisplay": "Bygdøy",
+        "AimedArrivalTime": "2016-01-21T22:15:00+01:00",
+        "ExpectedArrivalTime": "2016-01-21T22:15:00+01:00",
+        "AimedDepartureTime": "2016-01-21T22:15:00+01:00",
+        "ExpectedDepartureTime": "2016-01-21T22:15:00+01:00",
+        "DeparturePlatformName": "2"
+      },
+      "VehicleFeatureRef": null
+    },
+    "Extensions": {
+      "IsHub": false,
+      "OccupancyData": {
+        "OccupancyAvailable": false,
+        "OccupancyPercentage": 0
+      },
+      "Deviations": [],
+      "LineColour": "E60000"
+    }
+  },
+  {
+    "RecordedAtTime": "2016-01-21T21:45:43.31+01:00",
+    "MonitoringRef": "3010524",
+    "MonitoredVehicleJourney": {
+      "LineRef": "30",
+      "DirectionRef": "1",
+      "FramedVehicleJourneyRef": {
+        "DataFrameRef": "2016-01-21",
+        "DatedVehicleJourneyRef": "17307"
+      },
+      "PublishedLineName": "30",
+      "DirectionName": "1",
+      "OperatorRef": "Nobina",
+      "OriginName": "Huk",
+      "OriginRef": "3010151",
+      "DestinationRef": 3012135,
+      "DestinationName": "Nydalen",
+      "OriginAimedDepartureTime": "0001-01-01T00:00:00",
+      "DestinationAimedArrivalTime": "0001-01-01T00:00:00",
+      "Monitored": true,
+      "InCongestion": false,
+      "Delay": "PT122S",
+      "TrainBlockPart": null,
+      "BlockRef": "3009",
+      "VehicleRef": "741284",
+      "VehicleMode": 0,
+      "VehicleJourneyName": "200300173",
+      "MonitoredCall": {
+        "VisitNumber": 22,
+        "VehicleAtStop": false,
+        "DestinationDisplay": "Nydalen",
+        "AimedArrivalTime": "2016-01-21T22:27:00+01:00",
+        "ExpectedArrivalTime": "2016-01-21T22:29:02.315+01:00",
+        "AimedDepartureTime": "2016-01-21T22:27:00+01:00",
+        "ExpectedDepartureTime": "2016-01-21T22:29:02.315+01:00",
+        "DeparturePlatformName": "1"
+      },
+      "VehicleFeatureRef": null
+    },
+    "Extensions": {
+      "IsHub": false,
+      "OccupancyData": {
+        "OccupancyAvailable": true,
+        "OccupancyPercentage": 20
+      },
+      "Deviations": [],
+      "LineColour": "E60000"
+    }
+  },
+  {
+    "RecordedAtTime": "2016-01-21T21:45:43.31+01:00",
+    "MonitoringRef": "3010524",
+    "MonitoredVehicleJourney": {
+      "LineRef": "30",
+      "DirectionRef": "2",
+      "FramedVehicleJourneyRef": {
+        "DataFrameRef": "2016-01-21",
+        "DatedVehicleJourneyRef": "17607"
+      },
+      "PublishedLineName": "30",
+      "DirectionName": "2",
+      "OperatorRef": "Nobina",
+      "OriginName": "Tamburveien",
+      "OriginRef": "3012135",
+      "DestinationRef": 3010151,
+      "DestinationName": "Bygdøy",
+      "OriginAimedDepartureTime": "0001-01-01T00:00:00",
+      "DestinationAimedArrivalTime": "0001-01-01T00:00:00",
+      "Monitored": true,
+      "InCongestion": false,
+      "Delay": "PT0S",
+      "TrainBlockPart": null,
+      "BlockRef": "3003",
+      "VehicleRef": "741293",
+      "VehicleMode": 0,
+      "VehicleJourneyName": "200300176",
+      "MonitoredCall": {
+        "VisitNumber": 10,
+        "VehicleAtStop": false,
+        "DestinationDisplay": "Bygdøy",
+        "AimedArrivalTime": "2016-01-21T22:35:00+01:00",
+        "ExpectedArrivalTime": "2016-01-21T22:35:00+01:00",
+        "AimedDepartureTime": "2016-01-21T22:35:00+01:00",
+        "ExpectedDepartureTime": "2016-01-21T22:35:00+01:00",
+        "DeparturePlatformName": "2"
+      },
+      "VehicleFeatureRef": null
+    },
+    "Extensions": {
+      "IsHub": false,
+      "OccupancyData": {
+        "OccupancyAvailable": true,
+        "OccupancyPercentage": 0
+      },
+      "Deviations": [],
+      "LineColour": "E60000"
+    }
+  },
+  {
+    "RecordedAtTime": "0001-01-01T00:00:00",
+    "MonitoringRef": "3010524",
+    "MonitoredVehicleJourney": {
+      "LineRef": "30",
+      "DirectionRef": null,
+      "FramedVehicleJourneyRef": null,
+      "PublishedLineName": "30",
+      "DirectionName": null,
+      "OperatorRef": null,
+      "OriginName": null,
+      "OriginRef": null,
+      "DestinationRef": 0,
+      "DestinationName": "Nydalen",
+      "OriginAimedDepartureTime": "0001-01-01T00:00:00",
+      "DestinationAimedArrivalTime": "0001-01-01T00:00:00",
+      "Monitored": false,
+      "InCongestion": false,
+      "Delay": null,
+      "TrainBlockPart": null,
+      "BlockRef": null,
+      "VehicleRef": null,
+      "VehicleMode": 0,
+      "VehicleJourneyName": "200300175",
+      "MonitoredCall": {
+        "VisitNumber": 0,
+        "VehicleAtStop": false,
+        "DestinationDisplay": "Nydalen",
+        "AimedArrivalTime": "2016-01-21T22:47:00+01:00",
+        "ExpectedArrivalTime": "2016-01-21T22:47:00+01:00",
+        "AimedDepartureTime": "2016-01-21T22:47:00+01:00",
+        "ExpectedDepartureTime": "2016-01-21T22:47:00+01:00",
+        "DeparturePlatformName": "1"
+      },
+      "VehicleFeatureRef": null
+    },
+    "Extensions": {
+      "IsHub": false,
+      "OccupancyData": {
+        "OccupancyAvailable": false,
+        "OccupancyPercentage": 0
+      },
+      "Deviations": [],
+      "LineColour": "E60000"
+    }
+  },
+  {
+    "RecordedAtTime": "0001-01-01T00:00:00",
+    "MonitoringRef": "3010524",
+    "MonitoredVehicleJourney": {
+      "LineRef": "30",
+      "DirectionRef": null,
+      "FramedVehicleJourneyRef": null,
+      "PublishedLineName": "30",
+      "DirectionName": null,
+      "OperatorRef": null,
+      "OriginName": null,
+      "OriginRef": null,
+      "DestinationRef": 0,
+      "DestinationName": "Bygdøy",
+      "OriginAimedDepartureTime": "0001-01-01T00:00:00",
+      "DestinationAimedArrivalTime": "0001-01-01T00:00:00",
+      "Monitored": false,
+      "InCongestion": false,
+      "Delay": null,
+      "TrainBlockPart": null,
+      "BlockRef": null,
+      "VehicleRef": null,
+      "VehicleMode": 0,
+      "VehicleJourneyName": "200300178",
+      "MonitoredCall": {
+        "VisitNumber": 0,
+        "VehicleAtStop": false,
+        "DestinationDisplay": "Bygdøy",
+        "AimedArrivalTime": "2016-01-21T22:55:00+01:00",
+        "ExpectedArrivalTime": "2016-01-21T22:55:00+01:00",
+        "AimedDepartureTime": "2016-01-21T22:55:00+01:00",
+        "ExpectedDepartureTime": "2016-01-21T22:55:00+01:00",
+        "DeparturePlatformName": "2"
+      },
+      "VehicleFeatureRef": null
+    },
+    "Extensions": {
+      "IsHub": false,
+      "OccupancyData": {
+        "OccupancyAvailable": false,
+        "OccupancyPercentage": 0
+      },
+      "Deviations": [],
+      "LineColour": "E60000"
+    }
+  },
+  {
+    "RecordedAtTime": "0001-01-01T00:00:00",
+    "MonitoringRef": "3010524",
+    "MonitoredVehicleJourney": {
+      "LineRef": "30",
+      "DirectionRef": null,
+      "FramedVehicleJourneyRef": null,
+      "PublishedLineName": "30",
+      "DirectionName": null,
+      "OperatorRef": null,
+      "OriginName": null,
+      "OriginRef": null,
+      "DestinationRef": 0,
+      "DestinationName": "Nydalen",
+      "OriginAimedDepartureTime": "0001-01-01T00:00:00",
+      "DestinationAimedArrivalTime": "0001-01-01T00:00:00",
+      "Monitored": false,
+      "InCongestion": false,
+      "Delay": null,
+      "TrainBlockPart": null,
+      "BlockRef": null,
+      "VehicleRef": null,
+      "VehicleMode": 0,
+      "VehicleJourneyName": "200300177",
+      "MonitoredCall": {
+        "VisitNumber": 0,
+        "VehicleAtStop": false,
+        "DestinationDisplay": "Nydalen",
+        "AimedArrivalTime": "2016-01-21T23:07:00+01:00",
+        "ExpectedArrivalTime": "2016-01-21T23:07:00+01:00",
+        "AimedDepartureTime": "2016-01-21T23:07:00+01:00",
+        "ExpectedDepartureTime": "2016-01-21T23:07:00+01:00",
+        "DeparturePlatformName": "1"
+      },
+      "VehicleFeatureRef": null
+    },
+    "Extensions": {
+      "IsHub": false,
+      "OccupancyData": {
+        "OccupancyAvailable": false,
+        "OccupancyPercentage": 0
+      },
+      "Deviations": [],
+      "LineColour": "E60000"
+    }
+  },
+  {
+    "RecordedAtTime": "0001-01-01T00:00:00",
+    "MonitoringRef": "3010524",
+    "MonitoredVehicleJourney": {
+      "LineRef": "30",
+      "DirectionRef": null,
+      "FramedVehicleJourneyRef": null,
+      "PublishedLineName": "30",
+      "DirectionName": null,
+      "OperatorRef": null,
+      "OriginName": null,
+      "OriginRef": null,
+      "DestinationRef": 0,
+      "DestinationName": "Bygdøy",
+      "OriginAimedDepartureTime": "0001-01-01T00:00:00",
+      "DestinationAimedArrivalTime": "0001-01-01T00:00:00",
+      "Monitored": false,
+      "InCongestion": false,
+      "Delay": null,
+      "TrainBlockPart": null,
+      "BlockRef": null,
+      "VehicleRef": null,
+      "VehicleMode": 0,
+      "VehicleJourneyName": "200300180",
+      "MonitoredCall": {
+        "VisitNumber": 0,
+        "VehicleAtStop": false,
+        "DestinationDisplay": "Bygdøy",
+        "AimedArrivalTime": "2016-01-21T23:15:00+01:00",
+        "ExpectedArrivalTime": "2016-01-21T23:15:00+01:00",
+        "AimedDepartureTime": "2016-01-21T23:15:00+01:00",
+        "ExpectedDepartureTime": "2016-01-21T23:15:00+01:00",
+        "DeparturePlatformName": "2"
+      },
+      "VehicleFeatureRef": null
+    },
+    "Extensions": {
+      "IsHub": false,
+      "OccupancyData": {
+        "OccupancyAvailable": false,
+        "OccupancyPercentage": 0
+      },
+      "Deviations": [],
+      "LineColour": "E60000"
+    }
+  },
+  {
+    "RecordedAtTime": "0001-01-01T00:00:00",
+    "MonitoringRef": "3010524",
+    "MonitoredVehicleJourney": {
+      "LineRef": "30",
+      "DirectionRef": null,
+      "FramedVehicleJourneyRef": null,
+      "PublishedLineName": "30",
+      "DirectionName": null,
+      "OperatorRef": null,
+      "OriginName": null,
+      "OriginRef": null,
+      "DestinationRef": 0,
+      "DestinationName": "Nydalen",
+      "OriginAimedDepartureTime": "0001-01-01T00:00:00",
+      "DestinationAimedArrivalTime": "0001-01-01T00:00:00",
+      "Monitored": false,
+      "InCongestion": false,
+      "Delay": null,
+      "TrainBlockPart": null,
+      "BlockRef": null,
+      "VehicleRef": null,
+      "VehicleMode": 0,
+      "VehicleJourneyName": "200300179",
+      "MonitoredCall": {
+        "VisitNumber": 0,
+        "VehicleAtStop": false,
+        "DestinationDisplay": "Nydalen",
+        "AimedArrivalTime": "2016-01-21T23:27:00+01:00",
+        "ExpectedArrivalTime": "2016-01-21T23:27:00+01:00",
+        "AimedDepartureTime": "2016-01-21T23:27:00+01:00",
+        "ExpectedDepartureTime": "2016-01-21T23:27:00+01:00",
+        "DeparturePlatformName": "1"
+      },
+      "VehicleFeatureRef": null
+    },
+    "Extensions": {
+      "IsHub": false,
+      "OccupancyData": {
+        "OccupancyAvailable": false,
+        "OccupancyPercentage": 0
+      },
+      "Deviations": [],
+      "LineColour": "E60000"
+    }
+  },
+  {
+    "RecordedAtTime": "0001-01-01T00:00:00",
+    "MonitoringRef": "3010524",
+    "MonitoredVehicleJourney": {
+      "LineRef": "30",
+      "DirectionRef": null,
+      "FramedVehicleJourneyRef": null,
+      "PublishedLineName": "30",
+      "DirectionName": null,
+      "OperatorRef": null,
+      "OriginName": null,
+      "OriginRef": null,
+      "DestinationRef": 0,
+      "DestinationName": "Bygdøy",
+      "OriginAimedDepartureTime": "0001-01-01T00:00:00",
+      "DestinationAimedArrivalTime": "0001-01-01T00:00:00",
+      "Monitored": false,
+      "InCongestion": false,
+      "Delay": null,
+      "TrainBlockPart": null,
+      "BlockRef": null,
+      "VehicleRef": null,
+      "VehicleMode": 0,
+      "VehicleJourneyName": "200300182",
+      "MonitoredCall": {
+        "VisitNumber": 0,
+        "VehicleAtStop": false,
+        "DestinationDisplay": "Bygdøy",
+        "AimedArrivalTime": "2016-01-21T23:35:00+01:00",
+        "ExpectedArrivalTime": "2016-01-21T23:35:00+01:00",
+        "AimedDepartureTime": "2016-01-21T23:35:00+01:00",
+        "ExpectedDepartureTime": "2016-01-21T23:35:00+01:00",
+        "DeparturePlatformName": "2"
+      },
+      "VehicleFeatureRef": null
+    },
+    "Extensions": {
+      "IsHub": false,
+      "OccupancyData": {
+        "OccupancyAvailable": false,
+        "OccupancyPercentage": 0
+      },
+      "Deviations": [],
+      "LineColour": "E60000"
+    }
+  }
+]
