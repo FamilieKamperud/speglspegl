@@ -35,9 +35,10 @@
 
 .ruterSchedule-stop-route-time
   $color-busColor = cyan
+  $lineWidth = 0.15rem
   position relative
   margin 1rem
-  border 0.1rem solid $color-busColor
+  border $lineWidth solid $color-busColor
   border-radius 1.0em 0.2em 0.2em 0.5em
   padding 0.2em 0.3em 0.2em 0.6em
   min-width 4em
@@ -49,13 +50,13 @@
     content ' '
     display block
     position absolute
-    border 0.1rem solid $color-busColor
+    border $lineWidth solid $color-busColor
     border-radius 50%
     bottom -0.25em
     width 0.5em
     height 0.5em
     background black
-    background radial-gradient(circle, black 30%, $color-busColor 30%, $color-busColor 35%, black 35%)
+    background radial-gradient(circle, $color-busColor 20%, black 35%)
   &:after
     left 0.6em
   &:before
