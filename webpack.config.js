@@ -36,6 +36,10 @@ module.exports = {
         test: /\.json$/,
         loader: 'json-loader',
         include: path.resolve(__dirname, 'src')
+      },
+      {
+        test: /\.(ttf)$/,
+        loader: 'url-loader?limit=8192'
       }
     ]
   },
