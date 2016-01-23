@@ -5,6 +5,8 @@ import formatTimeToDeparture from '../lib/formatTimeToDeparture'
 import moment from 'moment'
 moment.locale('nb')
 
+import './ruterSchedule.styl'
+
 export default class RuterSchedule extends React.Component {
   static propTypes = {
     ruterSchedule: PropTypes.object.isRequired
@@ -29,12 +31,14 @@ export default class RuterSchedule extends React.Component {
     const { ruterSchedule } = this.props
     const { now } = this.state
     return (
-      <div>
-        <h2>Rutetider</h2>
-        {map(ruterSchedule, (stopSchedule, name) => (
-          <RuterStop name={name} key={name} now={now}
-            departures={stopSchedule.departures} />
-        ))}
+      <div className="ruterSchedule">
+        <h2 className="ruterSchedule-heading">Rutetider</h2>
+        <ul className="ruterSchedule-stops">
+          {map(ruterSchedule, (stopSchedule, name) => (
+            <Stop name={name} key={name} now={now}
+              departures={stopSchedule.departures} />
+          ))}
+        </ul>
       </div>
     )
   }
@@ -45,27 +49,29 @@ const mapStateToProps = (state) => {
   return { ruterSchedule }
 }
 
-const RuterStop = ({name, departures, now}) => (
-  <section>
-    <h3>{name}</h3>
-    <ul>
+const Stop = ({name, departures, now}) => (
+  <li className="ruterSchedule-stop">
+    <h3 className="ruterSchedule-stop-name">{name}</h3>
+    <ul className="ruterSchedule-stop-routes">
       {map(departures, (routeDepartures, name) => (
-        <RuterRoute name={name} key={name} now={now}
+        <Route name={name} key={name} now={now}
           departures={routeDepartures}/>
       ))}
     </ul>
-  </section>
+  </li>
 )
 
-const RuterRoute = ({departures, name, now}) => (
-  <section>
-    <h5>{name}</h5>
-    <ul>
+const Route = ({departures, name, now}) => (
+  <li className="ruterSchedule-stop-route">
+    <h5 className="ruterSchedule-stop-route-name">{name}</h5>
+    <ul className="ruterSchedule-stop-route-times">
       {departures.map((departure, index) => (
-        <li key={index}>{formatTimeToDeparture(departure, now)}</li>
+        <li key={index} className="ruterSchedule-stop-route-time">
+          {formatTimeToDeparture(departure, now)}
+        </li>
       ))}
     </ul>
-  </section>
+  </li>
 )
 
 export default connect(mapStateToProps)(RuterSchedule)

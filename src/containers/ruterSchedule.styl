@@ -1,0 +1,62 @@
+.ruterSchedule
+  font-size 3rem
+  margin 0 1rem
+
+.ruterSchedule-heading
+  font-weight normal
+  font-size 3.5rem
+  display none
+
+.ruterSchedule-stops
+  padding 0
+  list-style-type none
+
+.ruterSchedule-stop-name
+  font-weight normal
+  font-size 3rem
+
+.ruterSchedule-stop-routes
+  padding 0
+  list-style-type none
+
+.ruterSchedule-stop-route
+  display flex
+  align-items baseline
+
+.ruterSchedule-stop-route-name
+  margin 0 1rem 0 0
+  font-weight normal
+  min-width 6em
+
+.ruterSchedule-stop-route-times
+  padding 0
+  list-style-type none
+  display flex
+
+.ruterSchedule-stop-route-time
+  $color-busColor = cyan
+  position relative
+  margin 1rem
+  border 0.1rem solid $color-busColor
+  border-radius 1.0em 0.2em 0.2em 0.5em
+  padding 0.2em 0.3em 0.2em 0.6em
+  min-width 4em
+  text-align center
+  &:last-child
+    margin-right 0
+  &:before,
+  &:after
+    content ' '
+    display block
+    position absolute
+    border 0.1rem solid $color-busColor
+    border-radius 50%
+    bottom -0.25em
+    width 0.5em
+    height 0.5em
+    background black
+    background radial-gradient(circle, black 30%, $color-busColor 30%, $color-busColor 35%, black 35%)
+  &:after
+    left 0.6em
+  &:before
+    right 0.6em
