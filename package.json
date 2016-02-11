@@ -5,7 +5,8 @@
   "scripts": {
     "start": "node server.js",
     "test": "karma start",
-    "test:watch": "karma start --autoWatch=true --singleRun=false"
+    "test:watch": "karma start --autoWatch=true --singleRun=false",
+    "deploy": "NODE_ENV=production webpack -p --config webpack.prod.config.js"
   },
   "repository": {},
   "keywords": [],
