@@ -1,5 +1,6 @@
 var path = require('path')
 var webpack = require('webpack')
+var poststylus = require('poststylus')
 
 module.exports = {
   devtool: 'cheap-module-eval-source-map',
@@ -41,6 +42,9 @@ module.exports = {
         loader: 'url-loader?limit=8192'
       }
     ]
+  },
+  stylus:{
+	use: [poststylus(['autoprefixer', 'rucksack-css'])]
   },
   resolve: {
     extensions: ['', '.js', '.jsx']
