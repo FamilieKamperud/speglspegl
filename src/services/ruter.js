@@ -34,16 +34,28 @@ export function getDepartures(stopId){
 }
 
 export function parseDestinationInfo(buses){
-  // create object keys
-  let parsedDepartures = _.groupBy(buses, (bus)=>{
-    let departure = bus.MonitoredVehicleJourney;
-    return departure.PublishedLineName+' '+departure.DestinationName;
+  // filter buses where direction is null
+  // (there are a lot of falsy departures in the data retrieved from Ruter's API)
+  let parsedDepartures = _.filter(buses, (bus)=> {
+    return bus.MonitoredVehicleJourney.DirectionName;
   });
+
+  // create object keys
+  parsedDepartures = _.groupBy(parsedDepartures, (bus)=>{
+    let departure = bus.MonitoredVehicleJourney;
+    return departure.DirectionRef+' '+departure.PublishedLineName;
+  });
+
+  // only return the (3) next departures
+  parsedDepartures = _.mapValues(parsedDepartures, departures=> _.take(departures, DEPARTURES_CAP));
+
   // pick only expected arrival out of each bus departure
   parsedDepartures = _.mapValues(parsedDepartures, departures =>
-    _.map(departures, departure =>
-      moment(departure.MonitoredVehicleJourney.MonitoredCall.ExpectedArrivalTime)
-  ));
-  // only return the (3) next departures
-  return _.mapValues(parsedDepartures, departures=> _.take(departures, DEPARTURES_CAP)); 
+    _.map(departures, departure => {
+      return {
+        expectedArrival: moment(departure.MonitoredVehicleJourney.MonitoredCall.ExpectedArrivalTime),
+        finalDestination: departure.MonitoredVehicleJourney.DestinationName
+      }
+  }));
+  return parsedDepartures;
 }

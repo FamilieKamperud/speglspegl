@@ -13,4 +13,3 @@ export default function formatTimeToDeparture(departure, now = moment()) {
   }
   return `${duration.minutes()}m`
 }
-

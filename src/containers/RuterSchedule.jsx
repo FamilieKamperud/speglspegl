@@ -34,9 +34,8 @@ export default class RuterSchedule extends React.Component {
       <div className="ruterSchedule">
         <h2 className="ruterSchedule-heading">Rutetider</h2>
         <ul className="ruterSchedule-stops">
-          {map(ruterSchedule, (stopSchedule, name) => (
-            <Stop name={name} key={name} now={now}
-              departures={stopSchedule.departures} />
+          {map(ruterSchedule, (stopSchedule, stopName) => (
+            <Stop name={stopName} key={stopName} now={now} departures={stopSchedule.departures} />
           ))}
         </ul>
       </div>
@@ -53,10 +52,13 @@ const Stop = ({name, departures, now}) => (
   <li className="ruterSchedule-stop">
     <h3 className="ruterSchedule-stop-name">{name}</h3>
     <ul className="ruterSchedule-stop-routes">
-      {map(departures, (routeDepartures, name) => (
-        <Route name={name} key={name} now={now}
+      {map(departures, (routeDepartures, name) => {
+        let [direction, busLine] = name.split(" ");
+        let finalDestination = routeDepartures[0].finalDestination;
+        let title = busLine+" "+finalDestination;
+        return <Route name={title} key={title} now={now}
           departures={routeDepartures}/>
-      ))}
+      })}
     </ul>
   </li>
 )
@@ -65,11 +67,11 @@ const Route = ({departures, name, now}) => (
   <li className="ruterSchedule-stop-route">
     <h5 className="ruterSchedule-stop-route-name">{name}</h5>
     <ul className="ruterSchedule-stop-route-times">
-      {departures.map((departure, index) => (
-        <li key={index} className="ruterSchedule-stop-route-time">
-          {formatTimeToDeparture(departure, now)}
+      {departures.map((departure, index) => {
+        return <li key={index} className="ruterSchedule-stop-route-time">
+          {formatTimeToDeparture(departure.expectedArrival, now)}
         </li>
-      ))}
+      })}
     </ul>
   </li>
 )
