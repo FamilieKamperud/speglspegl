@@ -16,9 +16,13 @@ const fetchDepartures = () => {
   getDepartures(stops.dalenenga).then(departures => {
     store.dispatch(receiveRuterSchedule('Dælenenga', departures))
   })
+  getDepartures(stops.kobenhavngata).then(departures => {
+    store.dispatch(receiveRuterSchedule('Københavngata', departures))
+  })
 }
 fetchDepartures()
-setInterval(fetchDepartures, 10000)
+
+//setInterval(fetchDepartures, 10000)
 
 render(
   <Provider store={store}>
