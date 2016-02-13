@@ -7,9 +7,9 @@ const DEPARTURES_CAP = 3;
 
 export const stops = {
   dalenenga: 3010524,
-  birkelunden: 6644612,
-  kobenhavngata: 6644844,
-  carlberner: 6644460
+  birkelunden: 3010520,
+  kobenhavngata: 3010525,
+  carlberner: 3011400
 }
 
 function heartbeat(){
