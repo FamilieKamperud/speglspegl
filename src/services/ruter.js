@@ -6,28 +6,28 @@ import { receiveRuterSchedule } from '../actions'
 
 const DEPARTURES_CAP = 3;
 
-const stops = {
+export const stops = {
   dalenenga: 3010524,
   birkelunden: 3010520,
   kobenhavngata: 3010525,
   carlberner: 3011400
 }
-export const fetchBusDepartures = (store) => {
+export const fetchBusDepartures = (dispatch) => {
   getDepartures(stops.dalenenga).then(departures => {
-    store.dispatch(receiveRuterSchedule('Dælenenga', departures))
+    dispatch(receiveRuterSchedule('Dælenenga', departures))
   })
   getDepartures(stops.kobenhavngata).then(departures => {
-    store.dispatch(receiveRuterSchedule('Københavngata', departures))
+    dispatch(receiveRuterSchedule('Københavngata', departures))
   })
   getDepartures(stops.birkelunden).then(departures => {
-    store.dispatch(receiveRuterSchedule('Birkelunden', departures))
+    dispatch(receiveRuterSchedule('Birkelunden', departures))
   })
   getDepartures(stops.carlberner).then(departures => {
-    store.dispatch(receiveRuterSchedule('Carl Berner T', departures))
+    dispatch(receiveRuterSchedule('Carl Berner T', departures))
   })
 }
 
-function heartbeat(){
+export function heartbeat(){
   JSONP({
     url: 'http://reisapi.ruter.no/Heartbeat/Index',
     data: {},
@@ -37,7 +37,7 @@ function heartbeat(){
   })
 }
 
-function getDepartures(stopId){
+export function getDepartures(stopId){
   return new Promise((resolve, reject) => {
     JSONP({
       url: `http://reisapi.ruter.no/StopVisit/GetDepartures/${stopId}`,
@@ -48,7 +48,7 @@ function getDepartures(stopId){
   })
 }
 
-function parseDestinationInfo(buses){
+export function parseDestinationInfo(buses){
   // filter buses where direction is null
   // (there are a lot of falsy departures in the data retrieved from Ruter's API)
   let parsedDepartures = _.filter(buses, (bus)=> {
