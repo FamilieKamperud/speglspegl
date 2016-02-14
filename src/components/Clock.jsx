@@ -12,7 +12,7 @@ export default class Clock extends React.Component{
   }
   tick = () => {
     this.setState({ time: moment()})
-  }
+  };
 
   render () {
     return (
