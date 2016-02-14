@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react'
+import React from 'react'
 import moment from 'moment'
 
 import './clock.styl'
@@ -12,7 +12,7 @@ export default class Clock extends React.Component{
   }
   tick = () => {
     this.setState({ time: moment()})
-  };
+  }
 
   render () {
     return (
