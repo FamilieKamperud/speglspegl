@@ -1,10 +1,10 @@
 .ruterSchedule
-  font-size 2rem
+  font-size 1.3rem
   margin 0 1rem
 
 .ruterSchedule-heading
   font-weight normal
-  font-size 3.5rem
+  font-size 1.8rem
   display none
 
 .ruterSchedule-stops
@@ -13,7 +13,8 @@
 
 .ruterSchedule-stop-name
   font-weight normal
-  font-size 3rem
+  font-size 1.5rem
+  margin: 1rem 0
 
 .ruterSchedule-stop-routes
   padding 0
@@ -27,6 +28,10 @@
   margin 0 1rem 0 0
   font-weight normal
   min-width 6em
+  width 8em
+  white-space: nowrap
+  overflow: hidden
+  text-overflow: ellipsis
 
 .ruterSchedule-stop-route-times
   padding 0
@@ -37,7 +42,7 @@
   $color-busColor = cyan
   $lineWidth  = 0.15rem
   position relative
-  margin 1rem
+  margin 0.5rem
   border $lineWidth solid $color-busColor
   border-radius 1.0em 0.2em 0.2em 0.5em
   padding 0.2em 0.3em 0.2em 0.6em

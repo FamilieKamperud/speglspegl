@@ -2,17 +2,32 @@ import JSONP from 'browser-jsonp'
 import _ from 'lodash'
 import moment from 'moment'
 
+import { receiveRuterSchedule } from '../actions'
 
 const DEPARTURES_CAP = 3;
 
 export const stops = {
   dalenenga: 3010524,
-  birkelunden: 6644612,
-  kobenhavngata: 6644844,
-  carlberner: 6644460
+  birkelunden: 3010520,
+  kobenhavngata: 3010525,
+  carlberner: 3011400
+}
+export const fetchBusDepartures = (dispatch) => {
+  getDepartures(stops.dalenenga).then(departures => {
+    dispatch(receiveRuterSchedule('Dælenenga', departures))
+  })
+  getDepartures(stops.kobenhavngata).then(departures => {
+    dispatch(receiveRuterSchedule('Københavngata', departures))
+  })
+  getDepartures(stops.birkelunden).then(departures => {
+    dispatch(receiveRuterSchedule('Birkelunden', departures))
+  })
+  getDepartures(stops.carlberner).then(departures => {
+    dispatch(receiveRuterSchedule('Carl Berner T', departures))
+  })
 }
 
-function heartbeat(){
+export function heartbeat(){
   JSONP({
     url: 'http://reisapi.ruter.no/Heartbeat/Index',
     data: {},
