@@ -20,6 +20,10 @@ module.exports = function(config) {
       noInfo: true
     },
 
+    mochaReporter: {
+      showDiff: true
+    },
+
     plugins: [
       require('karma-webpack'),
       require('karma-phantomjs-launcher'),
