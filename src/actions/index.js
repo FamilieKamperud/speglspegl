@@ -1,7 +1,8 @@
 //import fetch from 'isomorphic-fetch'
-import moment from 'moment'
+import moment from 'moment';
 
-export const RECEIVE_RUTER_SCHEDULE = 'RECEIVE_RUTER_SCHEDULE'
+export const RECEIVE_RUTER_SCHEDULE = 'RECEIVE_RUTER_SCHEDULE';
+export const RECEIVE_WEATHER = 'RECEIVE_WEATHER';
 
 export function receiveRuterSchedule(stop, departures) {
   return {
@@ -9,5 +10,14 @@ export function receiveRuterSchedule(stop, departures) {
     stop,
     departures,
     receivedAt: moment()
-  }
+  };
+}
+
+export function receiveWeather(postalCode, weather){
+  return {
+    type: RECEIVE_WEATHER,
+    postalCode,
+    weather,
+    receivedAt: moment()
+  };
 }
