@@ -22,7 +22,7 @@
     "no-trailing-spaces": [1, { "skipBlankLines": true }],
     "no-unreachable": 1,
     "no-alert": 0,
-    "semi": [1, "never"],
+    "semi": [1, "always"],
     "react/jsx-no-bind": 1,
     "react/jsx-no-duplicate-props": 1,
     "react/jsx-indent-props": [1, 2],
