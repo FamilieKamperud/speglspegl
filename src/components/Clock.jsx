@@ -1,18 +1,22 @@
-import React from 'react'
-import moment from 'moment'
+import React from 'react';
+import moment from 'moment';
 
-import './clock.styl'
+import './clock.styl';
 
 export default class Clock extends React.Component{
   constructor(props) {
-    super(props)
-    this.interval = setInterval(this.tick, 1000)
-    const time = moment()
-    this.state = { time }
+    super(props);
+    this.interval = setInterval(this.tick, 1000);
+    const time = moment();
+    this.state = { time };
   }
   tick = () => {
-    this.setState({ time: moment()})
+    this.setState({ time: moment()});
   };
+
+  componentWillUnmount() {
+    clearTimeout(this.interval);
+  }
 
   render () {
     return (
