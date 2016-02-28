@@ -21,7 +21,7 @@ describe('yr api', () => {
         from: '2016-02-21T13:00:00',
         to: '2016-02-21T18:00:00',
         period: '2',
-        symbol: YR_SYMBOL_URL+'04.png',
+        symbol: YR_SYMBOL_URL+'04.svg',
         precipitation: '0',
         windSpeed: '2.0',
         temperature: '1'
@@ -30,7 +30,7 @@ describe('yr api', () => {
         from: '2016-02-21T18:00:00',
         to: '2016-02-22T00:00:00',
         period: '3',
-        symbol: YR_SYMBOL_URL+'mf/03n.44.png',
+        symbol: YR_SYMBOL_URL+'mf/03n.44.svg',
         precipitation: '0',
         windSpeed: '1.4',
         temperature: '0'
@@ -39,7 +39,7 @@ describe('yr api', () => {
         from: '2016-02-22T00:00:00',
         to: '2016-02-22T06:00:00',
         period: '0',
-        symbol: YR_SYMBOL_URL+'mf/03n.47.png',
+        symbol: YR_SYMBOL_URL+'mf/03n.47.svg',
         precipitation: '0',
         windSpeed: '1.6',
         temperature: '-2'
