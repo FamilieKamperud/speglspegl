@@ -10,7 +10,7 @@ export default class App extends React.Component {
     return (
       <div className="app">
         <RuterSchedule />
-        <div className="rightColumn">
+        <div className="app-rightColumn">
            <Clock />
            <YrWeather />
         </div>
