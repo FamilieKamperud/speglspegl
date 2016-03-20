@@ -21,7 +21,7 @@ export default class YrWeather extends React.Component {
     }
     const { weather }  = yrWeather['0566'];
     const { symbol, temperature, windSpeed } = weather[0];
-    const [T,W] = [temperature, Math.pow(windSpeed, 0.16)];
+    const [T,W] = [temperature, Math.pow(windSpeed*3.6, 0.16)];
     const effectiveTemperature = (13.12 + 0.6215*T - 11.37*W + 0.3965*T*W).toFixed();
 
     return (
