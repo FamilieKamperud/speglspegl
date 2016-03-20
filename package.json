@@ -6,7 +6,8 @@
     "start": "node server.js",
     "test": "karma start",
     "test:watch": "karma start --autoWatch=true --singleRun=false",
-    "deploy": "NODE_ENV=production webpack -p --config webpack.prod.config.js"
+    "deploy": "NODE_ENV=production webpack -p --config webpack.prod.config.js",
+    "prod-server": "NODE_ENV=production node prod-server.js"
   },
   "repository": {},
   "keywords": [],
