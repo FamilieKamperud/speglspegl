@@ -10,27 +10,52 @@ export default class YrWeather extends React.Component {
     yrWeather: PropTypes.object.isRequired
   };
 
-  constructor(props){
-    super(props);
-  }
-
   render(){
     const {yrWeather} = this.props;
     if(Object.keys(yrWeather).length === 0) {
       return null;
     }
-    const { weather }  = yrWeather['0566'];
-    const { symbol, temperature, windSpeed } = weather[0];
+    const {weather} = yrWeather['0566'];
+    return (
+      <div>
+        <WeatherRow size="large" weather={weather[0]}  />
+        <WeatherRow size="small" weather={weather[1]} />
+        <WeatherRow size="small" weather={weather[2]} />
+      </div>
+    );
+  }
+
+}
+
+class WeatherRow extends React.Component {
+
+  static propTypes = {
+    weather: PropTypes.object.isRequired,
+    size: PropTypes.string.isRequired
+  };
+
+  render(){
+    const {weather, size} = this.props;
+    const { symbol, temperature, windSpeed } = weather;
     const [T,W] = [temperature, Math.pow(windSpeed*3.6, 0.16)];
     const effectiveTemperature = (13.12 + 0.6215*T - 11.37*W + 0.3965*T*W).toFixed();
 
+    let eff = void 0;
+    if(size==='large'){
+      eff = (
+        <div>
+          <h5 className={`yrWeather-effective-temperature-text--${size}`}>EFFEKTIV</h5>
+          <h5 className={`yrWeather-effective-temperature-text--${size}`}>TEMP</h5>
+        </div>
+      );
+    }
+
     return (
       <div className="yrWeather">
-        <img className="yrWeather-symbol" ref="yrImage" src={symbol} ></img>
-        <h2 className="yrWeather-temperature">{temperature}°</h2>
-        <div className="yrWeather-effective-temperature">
-          <h5 className="yrWeather-effective-temperature-text">EFFEKTIV</h5>
-          <h5 className="yrWeather-effective-temperature-text">TEMP</h5>
+        <img className={`yrWeather-symbol--${size}`} ref="yrImage" src={symbol} ></img>
+        <h2 className={`yrWeather-temperature--${size}`}>{temperature}°</h2>
+        <div className={`yrWeather-effective-temperature--${size}`}>
+          {eff}
           <h2 className="yrWeather-effective-temperature-temp">{effectiveTemperature}°</h2>
         </div>
       </div>
