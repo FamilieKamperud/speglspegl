@@ -37,8 +37,8 @@ describe('yrWeather', () => {
       }
     };
     const state = yrWeather(undefined, receiveWeather(weather));
-    expect(state['forecast'].weather).to.equal(weather);
-    expect(state['forecast'].receivedAt.isSame(moment(), 'day')).to.be.true;
+    expect(state.weather).to.equal(weather);
+    expect(state.receivedAt.isSame(moment(), 'day')).to.be.true;
   });
 
 });

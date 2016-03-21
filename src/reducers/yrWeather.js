@@ -6,10 +6,9 @@ export default (state = initialState, action) => {
   switch(action.type) {
     case RECEIVE_WEATHER:
       const { weather, receivedAt } = action;
-      debugger;
-      return { ...state, ['forecast']: {
+      return {
         weather, receivedAt
-      }};
+      };
     default:
       return state;
   }
