@@ -36,9 +36,9 @@ describe('yrWeather', () => {
         temperature: '-2'
       }
     };
-    const state = yrWeather(undefined, receiveWeather('0566', weather));
-    expect(state['0566'].weather).to.equal(weather);
-    expect(state['0566'].receivedAt.isSame(moment(), 'day')).to.be.true;
+    const state = yrWeather(undefined, receiveWeather(weather));
+    expect(state['forecast'].weather).to.equal(weather);
+    expect(state['forecast'].receivedAt.isSame(moment(), 'day')).to.be.true;
   });
 
 });

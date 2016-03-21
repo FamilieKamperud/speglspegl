@@ -13,10 +13,10 @@ export function receiveRuterSchedule(stop, departures) {
   };
 }
 
-export function receiveWeather(postalCode, weather){
+export function receiveWeather(weather){
+  debugger;
   return {
     type: RECEIVE_WEATHER,
-    postalCode,
     weather,
     receivedAt: moment()
   };

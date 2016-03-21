@@ -10,7 +10,8 @@ export const YR_SYMBOL_URL = 'https://crossorigin.me/http://symbol.yr.no/grafikk
 
 export const fetchWeatherInfo = (dispatch) =>{
   getWeather(postalCode).then(weather =>{
-    dispatch(receiveWeather(postalCode, weather));
+    debugger;
+    dispatch(receiveWeather(weather));
   });
 };
 

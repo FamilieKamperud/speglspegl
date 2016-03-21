@@ -15,7 +15,7 @@ export default class YrWeather extends React.Component {
     if(Object.keys(yrWeather).length === 0) {
       return null;
     }
-    const {weather} = yrWeather['0566'];
+    const {weather} = yrWeather['forecast'];
     return (
       <div>
         <WeatherRow size="large" weather={weather[0]}  />
