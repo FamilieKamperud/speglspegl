@@ -1,9 +1,9 @@
 import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
-import map from 'lodash/collection/map';
+import map from 'lodash/map';
 import formatTimeToDeparture from '../lib/formatTimeToDeparture';
 import moment from 'moment';
-moment.locale('nb');
+
 
 import './ruterSchedule.styl';
 
