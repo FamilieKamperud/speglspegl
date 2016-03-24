@@ -44,8 +44,8 @@ class WeatherRow extends React.Component {
     if(size==='large'){
       eff = (
         <div>
-          <h5 className={`yrWeather-effective-temperature-text--${size}`}>EFFEKTIV</h5>
-          <h5 className={`yrWeather-effective-temperature-text--${size}`}>TEMP</h5>
+          <h5 className={`yrWeather-effective-temperature-text--${size}`}>Effektiv</h5>
+          <h5 className={`yrWeather-effective-temperature-text--${size}`}>temp</h5>
         </div>
       );
     }
