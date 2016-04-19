@@ -1,8 +1,10 @@
-import { combineReducers } from 'redux'
-import ruterSchedule from './ruterSchedule'
+import { combineReducers } from 'redux';
+import ruterSchedule from './ruterSchedule';
+import yrWeather from './yrWeather';
 
 const rootReducer = combineReducers({
-  ruterSchedule
-})
+  ruterSchedule,
+  yrWeather
+});
 
-export default rootReducer
+export default rootReducer;

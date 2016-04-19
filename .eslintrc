@@ -1,8 +1,14 @@
 {
   "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
   "plugins": [
     "react"
   ],
+  "extends": "plugin:react/recommended",
   "env": {
     "browser": true,
     "amd": true,
@@ -22,7 +28,7 @@
     "no-trailing-spaces": [1, { "skipBlankLines": true }],
     "no-unreachable": 1,
     "no-alert": 0,
-    "semi": [1, "never"],
+    "semi": [1, "always"],
     "react/jsx-no-bind": 1,
     "react/jsx-no-duplicate-props": 1,
     "react/jsx-indent-props": [1, 2],
@@ -38,6 +44,7 @@
     "react/require-extension": [1, "extensions": [".js", ".jsx"]],
     "react/self-closing-comp": 1,
     "react/wrap-multilines": 1,
-    "react/jsx-uses-react": 1
+    "react/jsx-uses-react": 1,
+    "react/jsx-uses-vars": 1
   }
 }

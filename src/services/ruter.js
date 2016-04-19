@@ -1,8 +1,8 @@
-import JSONP from 'browser-jsonp'
-import _ from 'lodash'
-import moment from 'moment'
+import JSONP from 'browser-jsonp';
+import _ from 'lodash';
+import moment from 'moment';
 
-import { receiveRuterSchedule } from '../actions'
+import { receiveRuterSchedule } from '../actions';
 
 const DEPARTURES_CAP = 3;
 
@@ -11,21 +11,21 @@ export const stops = {
   birkelunden: 3010520,
   kobenhavngata: 3010525,
   carlberner: 3011400
-}
+};
 export const fetchBusDepartures = (dispatch) => {
   getDepartures(stops.dalenenga).then(departures => {
-    dispatch(receiveRuterSchedule('Dælenenga', departures))
-  })
+    dispatch(receiveRuterSchedule('Dælenenga', departures));
+  });
   getDepartures(stops.kobenhavngata).then(departures => {
-    dispatch(receiveRuterSchedule('Københavngata', departures))
-  })
+    dispatch(receiveRuterSchedule('Københavngata', departures));
+  });
   getDepartures(stops.birkelunden).then(departures => {
-    dispatch(receiveRuterSchedule('Birkelunden', departures))
-  })
+    dispatch(receiveRuterSchedule('Birkelunden', departures));
+  });
   getDepartures(stops.carlberner).then(departures => {
-    dispatch(receiveRuterSchedule('Carl Berner T', departures))
-  })
-}
+    dispatch(receiveRuterSchedule('Carl Berner T', departures));
+  });
+};
 
 export function heartbeat(){
   JSONP({
@@ -34,7 +34,7 @@ export function heartbeat(){
     success: function(data) {
       alert(data);
     }
-  })
+  });
 }
 
 export function getDepartures(stopId){
@@ -44,8 +44,8 @@ export function getDepartures(stopId){
       data: {},
       success: data => resolve(parseDestinationInfo(data)),
       error: reject
-    })
-  })
+    });
+  });
 }
 
 export function parseDestinationInfo(buses){
@@ -70,7 +70,7 @@ export function parseDestinationInfo(buses){
       return {
         expectedArrival: moment(departure.MonitoredVehicleJourney.MonitoredCall.ExpectedArrivalTime),
         finalDestination: departure.MonitoredVehicleJourney.DestinationName
-      }
-  }));
+      };
+    }));
   return parsedDepartures;
 }
