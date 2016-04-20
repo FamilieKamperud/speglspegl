@@ -1,17 +1,16 @@
+# Speil
+
+[![Circle CI](https://circleci.com/gh/johanhelsing/speglspegl.svg?style=svg)](https://circleci.com/gh/johanhelsing/speglspegl)
+
+## Testing
 
 To run tests:
 npm run test:watch
 
+## Development
+
 To start server:
 npm start
-
-To compile for deployment:
-npm run deploy
-
-Deployment build creates bundle.js (with all javascript and css),
-and files for fonts. These are created in a "dist" folder
-Copy these files to branch gh-pages to deploy to production website
-(johanhelsing.github.io/speglspegl)
 
 Project structure:
     src:
@@ -32,3 +31,7 @@ Project structure:
       store:
         the redux store
       
+## Deploy
+
+To compile for deployment:
+npm run deploy
