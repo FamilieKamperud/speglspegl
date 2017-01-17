@@ -7,29 +7,29 @@ import { receiveRuterSchedule } from '../actions';
 const DEPARTURES_CAP = 3;
 
 export const stops = {
-  dalenenga: 3010524,
-  birkelunden: 3010520,
-  kobenhavngata: 3010525,
-  carlberner: 3011400
+  toyen:3010600,
+  sarsgate: 3014534,
+  sofienberg: 3010533,
+  helgesensgate: 3010536
 };
 export const fetchBusDepartures = (dispatch) => {
-  getDepartures(stops.dalenenga).then(departures => {
-    dispatch(receiveRuterSchedule('Dælenenga', departures));
+  getDepartures(stops.helgesensgate).then(departures => {
+    dispatch(receiveRuterSchedule('Helgesens gate', departures));
   });
-  getDepartures(stops.kobenhavngata).then(departures => {
-    dispatch(receiveRuterSchedule('Københavngata', departures));
+  getDepartures(stops.sarsgate).then(departures => {
+    dispatch(receiveRuterSchedule('Sars gate', departures));
   });
-  getDepartures(stops.birkelunden).then(departures => {
-    dispatch(receiveRuterSchedule('Birkelunden', departures));
+  getDepartures(stops.sofienberg).then(departures => {
+    dispatch(receiveRuterSchedule('Sofienberg', departures));
   });
-  getDepartures(stops.carlberner).then(departures => {
-    dispatch(receiveRuterSchedule('Carl Berner T', departures));
+  getDepartures(stops.toyen).then(departures => {
+    dispatch(receiveRuterSchedule('Tøyen T', departures));
   });
 };
 
 export function heartbeat(){
   JSONP({
-    url: 'http://reisapi.ruter.no/Heartbeat/Index',
+    url: 'https://reisapi.ruter.no/Heartbeat/Index',
     data: {},
     success: function(data) {
       alert(data);
@@ -40,7 +40,7 @@ export function heartbeat(){
 export function getDepartures(stopId){
   return new Promise((resolve, reject) => {
     JSONP({
-      url: `http://reisapi.ruter.no/StopVisit/GetDepartures/${stopId}`,
+      url: `https://reisapi.ruter.no/StopVisit/GetDepartures/${stopId}`,
       data: {},
       success: data => resolve(parseDestinationInfo(data)),
       error: reject

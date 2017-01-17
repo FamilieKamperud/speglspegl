@@ -3,7 +3,6 @@ var webpack = require('webpack')
 var poststylus = require('poststylus')
 
 module.exports = {
-  devtool: 'cheap-module-eval-source-map',
   entry: [
     './src/index'
   ],
@@ -15,7 +14,6 @@ module.exports = {
   plugins: [
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.NoErrorsPlugin(),
-    new webpack.optimize.DedupePlugin(),
     new webpack.ProvidePlugin({
       'Promise': 'exports?global.Promise!es6-promise'
     })
@@ -47,6 +45,6 @@ module.exports = {
 	use: [poststylus(['autoprefixer', 'rucksack-css'])]
   },
   resolve: {
-    extensions: ['', '.js', '.jsx']
+    extensions: ['', '.js', '.jsx', '.styl']
   }
 }
