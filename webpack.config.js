@@ -3,7 +3,6 @@ var webpack = require('webpack')
 var poststylus = require('poststylus')
 
 module.exports = {
-  devtool: '#cheap-module-eval-source-map',
   entry: [
     'webpack-hot-middleware/client',
     './src/index'
@@ -45,9 +44,9 @@ module.exports = {
     ]
   },
   stylus:{
-	use: [poststylus(['autoprefixer', 'rucksack-css'])]	 
+	use: [poststylus(['autoprefixer', 'rucksack-css'])]
   },
   resolve: {
-    extensions: ['', '.js', '.jsx']
+    extensions: ['', '.js', '.jsx', '.styl']
   }
 }

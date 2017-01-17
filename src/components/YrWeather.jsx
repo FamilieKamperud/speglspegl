@@ -5,7 +5,7 @@ moment.locale('nb');
 
 import './yrWeather.styl';
 
-export default class YrWeather extends React.Component {
+export class YrWeather extends React.Component {
   static propTypes = {
     yrWeather: PropTypes.object.isRequired
   };

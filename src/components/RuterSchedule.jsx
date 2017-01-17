@@ -7,7 +7,7 @@ import moment from 'moment';
 
 import './ruterSchedule.styl';
 
-export default class RuterSchedule extends React.Component {
+export class RuterSchedule extends React.Component {
   static propTypes = {
     ruterSchedule: PropTypes.object.isRequired
   };
